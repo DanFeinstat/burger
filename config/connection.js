@@ -1,13 +1,18 @@
 //import packages
 const mysql = require("mysql");
-
+var connection;
 //create connection object
-const connection = createConnection({
-  host: process.env.MYSQL_HOST || "localhost",
-  user: process.env.MYSQL_USER || "root",
-  password: process.env.MYSQL_PASSWORD || "",
-  database: process.env.MYSQL_DB || "burgers_db",
-});
+if (process.env.JAWSBD_URL) {
+  connection = mysql.createConnection(process.env.JAWSBD_URL);
+} else {
+  connection = mysql.createConnection({
+    host: process.env.MYSQL_HOST || "localhost",
+    user: process.env.MYSQL_USER || "root",
+    password: process.env.MYSQL_PASSWORD || "root",
+    database: process.env.MYSQL_DB || "burger_db",
+    port: process.env.MYSQL_PORT || 8889,
+  });
+}
 
 //connect to mysql database
 connection.connect(function(err) {

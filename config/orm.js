@@ -22,7 +22,7 @@ const orm = {
     let queryString = "UPDATE ?? SET ?? = ? WHERE id = ?";
     connection.query(
       queryString,
-      [tableName, coltoUpdate, updateVal, id],
+      [tableName, colToUpdate, updateVal, id],
       function(err, res) {
         if (err) throw err;
         cb(res);

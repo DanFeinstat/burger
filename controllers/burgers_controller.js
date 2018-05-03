@@ -1,6 +1,6 @@
 //import burgers.js from models
 //import express for express router
-const burgers = require("../models/burgers");
+const burgers = require("../models/burger.js");
 const express = require("express");
 
 //set up express router
@@ -23,7 +23,7 @@ router.post("/api/burgers", function(req, res) {
 });
 
 //set up update route
-router.put("api/burgers/:id", function(req, res) {
+router.put("/api/burgers/:id", function(req, res) {
   let burgerId = req.params.id;
   burgers.update(req.body.devoured, burgerId, function(results) {
     res.status(200).json({ message: "Updated devoured status" });

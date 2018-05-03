@@ -1,0 +1,68 @@
+body {
+  background-color: #d39456;
+  color: #5e3a20;
+}
+
+a {
+  color: #5e3a20;
+}
+
+.header-container {
+  margin-top: 40px;
+}
+
+.center-element {
+  text-align: center;
+}
+
+.form-container {
+  border: 2px solid black;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#foodtruckImg {
+  max-height: 300px;
+}
+
+#head-list {
+  font-weight: bold;
+}
+
+.input-lg {
+  border: none;
+}
+
+.individual-burger {
+  list-style: none;
+}
+
+#submit-button {
+  border-radius: 5px;
+  width: 25%;
+  height: 40px;
+  border: 2px solid #977557;
+  color: #cec2b6;
+}
+
+#submit-button:hover {
+  background-color: #977557;
+  color: #efefeb;
+}
+
+.eat-button {
+  color: #977557;
+  background-color: #efefeb;
+}
+
+.eat-button:hover {
+  background-color: #cec2b6;
+  color: #efefeb;
+}
+
+.btn-light {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
